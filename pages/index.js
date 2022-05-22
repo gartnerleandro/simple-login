@@ -8,10 +8,10 @@ import useLogin from "../hooks/useLogin";
 import Welcome from "../components/Welcome";
 
 export default function Home() {
-  const { user, saveUser } = useLogin();
+  const { user, login, logout } = useLogin();
 
   function handleFormSubmit(data) {
-    saveUser(data);
+    login(data);
   }
 
   return (
@@ -26,7 +26,9 @@ export default function Home() {
         <Brand />
         {typeof user === "undefined" && <div>Loading...</div>}
         {user === null && <Form onSend={handleFormSubmit} />}
-        {user && Object.keys(user).length > 0 && <Welcome user={user} />}
+        {user && Object.keys(user).length > 0 && (
+          <Welcome user={user} onLogOut={logout} />
+        )}
       </main>
 
       <footer className={styles.footer}></footer>

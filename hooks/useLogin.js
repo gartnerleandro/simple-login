@@ -15,10 +15,15 @@ export default function useLogin() {
     }
   }, []);
 
-  function saveUser(userData) {
+  function login(userData) {
     setSessionValue("user", userData);
     setUser(userData);
   }
 
-  return { user, saveUser };
+  function logout() {
+    setSessionValue("user", null);
+    setUser(null);
+  }
+
+  return { user, login, logout };
 }
