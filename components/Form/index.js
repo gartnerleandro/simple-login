@@ -1,7 +1,7 @@
 import { useState } from "react";
-import User from "../Icons/User";
-import Email from "../Icons/Email";
-import Lock from "../Icons/Lock";
+import User from "../Icons/user";
+import Email from "../Icons/email";
+import Lock from "../Icons/lock";
 
 import styles from "../../styles/Form.module.css";
 
