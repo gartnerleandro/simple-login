@@ -25,14 +25,23 @@ export default function Home() {
 
       <main className={styles.main}>
         <Brand />
-        {typeof user === "undefined" && <Loading />}
-        {user === null && <Form onSend={handleFormSubmit} />}
-        {user && Object.keys(user).length > 0 && (
-          <Welcome user={user} onLogOut={logout} />
-        )}
+        <div className={styles.pageContent}>
+          {typeof user === "undefined" && <Loading />}
+          {user === null && <Form onSend={handleFormSubmit} />}
+          {user && Object.keys(user).length > 0 && (
+            <Welcome user={user} onLogOut={logout} />
+          )}
+          <footer className={styles.footer}>
+            Developed by{" "}
+            <a href="https://github.com/gartnerleandro">gartnerleandro</a>.
+            Design inspired by{" "}
+            <a href="https://www.figma.com/community/file/1098926234598800271">
+              mmekutmfon
+            </a>
+            .
+          </footer>
+        </div>
       </main>
-
-      <footer className={styles.footer}></footer>
     </div>
   );
 }

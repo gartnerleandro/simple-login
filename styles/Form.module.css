@@ -1,13 +1,3 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-top-right-radius: 40px;
-  background: #ffffff;
-  flex: 0.5;
-}
-
 .contentWrapper {
   display: flex;
   flex-direction: column;
@@ -77,13 +67,4 @@
 
 .signupButton:hover {
   cursor: pointer;
-}
-
-@media screen and (max-width: 980px) {
-  .container {
-    border-top-left-radius: 40px;
-    align-items: inherit;
-    padding: 0 40px;
-    flex: 1;
-  }
 }
