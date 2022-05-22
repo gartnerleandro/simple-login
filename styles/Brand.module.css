@@ -3,14 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  flex: 1;
 }
 
 .brandName {
   color: #ffffff;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 980px) {
   .container {
     display: none;
   }

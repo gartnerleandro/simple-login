@@ -41,37 +41,39 @@ export default function Form({ onSend }) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.formHeader}>
-        <h2 className={styles.title}>Hola!</h2>
-        <p className={styles.subtitle}>Registrate para empezar</p>
-      </div>
+      <div className={styles.contentWrapper}>
+        <div className={styles.formHeader}>
+          <h2 className={styles.title}>Hola!</h2>
+          <p className={styles.subtitle}>Registrate para empezar</p>
+        </div>
 
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          onChange={handleChange}
-          name="name"
-          icon={<User />}
-          placeholder="Nombre"
-        />
-        <Input
-          type="email"
-          onChange={handleChange}
-          name="email"
-          icon={<Email />}
-          placeholder="Correo electrónico"
-        />
-        <Input
-          type="password"
-          onChange={handleChange}
-          name="password"
-          icon={<Lock />}
-          placeholder="Contraseña"
-        />
-        <button className={styles.signupButton} type="submit">
-          Registrarme
-        </button>
-      </form>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <Input
+            type="text"
+            onChange={handleChange}
+            name="name"
+            icon={<User />}
+            placeholder="Nombre"
+          />
+          <Input
+            type="email"
+            onChange={handleChange}
+            name="email"
+            icon={<Email />}
+            placeholder="Correo electrónico"
+          />
+          <Input
+            type="password"
+            onChange={handleChange}
+            name="password"
+            icon={<Lock />}
+            placeholder="Contraseña"
+          />
+          <button className={styles.signupButton} type="submit">
+            Registrarme
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
