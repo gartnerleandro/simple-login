@@ -6,6 +6,7 @@ import Form from "../components/Form";
 import styles from "../styles/Home.module.css";
 import useLogin from "../hooks/useLogin";
 import Welcome from "../components/Welcome";
+import Loading from "../components/Loading";
 
 export default function Home() {
   const { user, login, logout } = useLogin();
@@ -24,7 +25,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <Brand />
-        {typeof user === "undefined" && <div>Loading...</div>}
+        {typeof user === "undefined" && <Loading />}
         {user === null && <Form onSend={handleFormSubmit} />}
         {user && Object.keys(user).length > 0 && (
           <Welcome user={user} onLogOut={logout} />
