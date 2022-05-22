@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { getSessionValue, setSessionValue } from "../utils/cookies";
 
-export default function useLogin() {
+export default function useSignup() {
   const [user, setUser] = useState(undefined);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function useLogin() {
     }
   }, []);
 
-  function login(userData) {
+  function signup(userData) {
     const cleanUserData = { ...userData };
 
     if (cleanUserData) {
@@ -30,5 +30,5 @@ export default function useLogin() {
     setUser(null);
   }
 
-  return { user, login, logout };
+  return { user, signup, logout };
 }
