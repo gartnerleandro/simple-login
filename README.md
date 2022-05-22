@@ -4,7 +4,7 @@ This is a simple signup project made with [NextJS](https://nextjs.org/). The des
 
 <div align="center">
   <h3>
-    <a href="">
+    <a href="https://simple-signup.vercel.app/">
       Demo
     </a>
     <span> | </span>
