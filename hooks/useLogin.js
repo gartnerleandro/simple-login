@@ -16,8 +16,13 @@ export default function useLogin() {
   }, []);
 
   function login(userData) {
-    setSessionValue("user", userData);
-    setUser(userData);
+    const cleanUserData = { ...userData };
+
+    if (cleanUserData) {
+      delete cleanUserData.password;
+      setSessionValue("user", cleanUserData);
+      setUser(cleanUserData);
+    }
   }
 
   function logout() {
