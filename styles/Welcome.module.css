@@ -19,3 +19,10 @@
   margin: 0;
   font-weight: 300;
 }
+
+@media screen and (max-width: 700px) {
+  .container {
+    max-width: unset;
+    border-top-left-radius: 40px;
+  }
+}
